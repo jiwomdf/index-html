@@ -11,9 +11,14 @@
         }
 
         // Receive a message from Flutter
-        function receiveMessageFromFlutter(message) {
-            console.log("Message from Flutter: " + message);
-            alert("Message from Flutter: " + message);
+        function webviewCallback(message) {
+            console.log("webviewCallback: " + message);
+            alert("webviewCallback: " + message);
+        }
+
+        function iosCallback(message) {
+            console.log("iosCallback: " + message);
+            alert("iosCallback: " + message);
         }
     </script>
 </head>
