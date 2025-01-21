@@ -3,15 +3,21 @@
 <head>
     <title>WebView Interface</title>
     <script>
-        async function callFlutterFunction() {
+        async function callFlutterWebViewCallBack() {
           let result = await window.flutterWebviewCallback();
-          alert("result: " + result)
+          alert("result android: " + result)
+        }
+
+        async function callFlutteriOSCallBackCallBack() {
+          let result = await window.flutterWebviewCallback();
+          alert("result ios: " + result)
         }
 
     </script>
 </head>
 <body>
-    <button onclick="callFlutterFunction()">callFlutterFunction</button>
+    <button onclick="callFlutterWebViewCallBack()">webviewCallback</button>
+    <button onclick="callFlutteriOSCallBackCallBack()">iosCallback</button>
 </body>
 </html>
 
