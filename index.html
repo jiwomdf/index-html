@@ -20,6 +20,17 @@
             console.log("iosCallback: " + message);
             alert("iosCallback: " + message);
         }
+
+        /** Function for Flutter **/
+        function callFlutter() {
+          // Call Flutter's Javascript Channel
+          window.FlutterInterface.postMessage('webviewCallback');
+        }
+    
+        function handleFlutterResponse(result) {
+          console.log('Flutter returned: ' + result); // Logs true or false
+        }
+
     </script>
 </head>
 <body>
