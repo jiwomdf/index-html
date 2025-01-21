@@ -3,34 +3,6 @@
 <head>
     <title>WebView Interface</title>
     <script>
-        // Send a message to Flutter
-        function sendMessageToFlutter() {
-            if (window.FlutterChannel) {
-                window.FlutterChannel.postMessage("Hello from JavaScript!");
-            }
-        }
-
-        // Receive a message from Flutter
-        function webviewCallback(message) {
-            console.log("webviewCallback: " + message);
-            alert("webviewCallback: " + message);
-        }
-
-        function iosCallback(message) {
-            console.log("iosCallback: " + message);
-            alert("iosCallback: " + message);
-        }
-
-        /** Function for Flutter **/
-        function callFlutter() {
-          // Call Flutter's Javascript Channel
-          window.FlutterInterface.postMessage('webviewCallback');
-        }
-    
-        function handleFlutterResponse(result) {
-          console.log('Flutter returned: ' + result); // Logs true or false
-        }
-
         async function callFlutterFunction() {
           let result = await window.flutterWebviewCallback();
           console.log("Result from Flutter: " + result);
@@ -40,9 +12,7 @@
     </script>
 </head>
 <body>
-    <button onclick="sendMessageToFlutter()">Send Message to Flutter</button>
-    <button onclick="callFlutter()">Send Message to Flutter</button>
-    <button onclick="callFlutterFunction()">Call Flutter</button>
+    <button onclick="callFlutterFunction()">callFlutterFunction</button>
 </body>
 </html>
 
