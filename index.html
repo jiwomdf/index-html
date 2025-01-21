@@ -4,12 +4,12 @@
     <title>WebView Interface</title>
     <script>
         async function callFlutterWebViewCallBack() {
-          let result = await window.flutterWebviewCallback();
+          let result = await window.webviewCallback();
           alert("result android: " + result)
         }
 
         async function callFlutteriOSCallBackCallBack() {
-          let result = await window.flutterWebviewCallback();
+          let result = await window.iosCallback();
           alert("result ios: " + result)
         }
 
