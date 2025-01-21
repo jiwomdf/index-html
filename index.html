@@ -31,11 +31,17 @@
           console.log('Flutter returned: ' + result); // Logs true or false
         }
 
+        async function callFlutterFunction() {
+          let result = await window.flutterWebviewCallback();
+          console.log("Result from Flutter: " + result);
+        }
+
     </script>
 </head>
 <body>
     <button onclick="sendMessageToFlutter()">Send Message to Flutter</button>
     <button onclick="callFlutter()">Send Message to Flutter</button>
+    <button onclick="callFlutterFunction()">Call Flutter</button>
 </body>
 </html>
 
