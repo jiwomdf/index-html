@@ -13,11 +13,17 @@
           alert("result ios: " + result)
         }
 
+        async function callFlutterLogOutOnWebview() {
+          let result = await window.logOutOnWebview();
+          alert("result ios: " + result)
+        }
+
     </script>
 </head>
 <body>
     <button onclick="callFlutterWebViewCallBack()">webviewCallback</button>
     <button onclick="callFlutteriOSCallBackCallBack()">iosCallback</button>
+    <button onclick="callFlutterLogOutOnWebview()">logOutOnWebview</button>
 </body>
 </html>
 
