@@ -22,6 +22,11 @@
           alert("downloadPdfCallBack: " + result)
         }
 
+        async function downloadPdfCallBackObj() {
+          let result = await window.sendToFlutter("downloadPdf", "https://drive.google.com/uc?export=download&id=1HWSErLOtYOZ9zNFvdo1mpXJuXBwoJJSu");
+          alert("downloadPdfCallBackObj: " + result)
+        }
+
     </script>
 </head>
 <body>
@@ -29,5 +34,6 @@
     <button onclick="callFlutteriOSCallBackCallBack()">iosCallback</button>
     <button onclick="callFlutterLogOutOnWebview()">logOutOnWebview</button>
     <button onclick="downloadPdfCallBack()">downloadPdf</button>
+    <button onclick="downloadPdfCallBackObj()">downloadPdfObj</button>
 </body>
 </html>
