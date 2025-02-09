@@ -17,7 +17,7 @@
           let result = await window.logOutOnWebview();
         }
 
-        async function downloadPdf() {
+        async function downloadPdfCallBack() {
           let result = await window.downloadPdf();
         }
 
@@ -27,6 +27,7 @@
     <button onclick="callFlutterWebViewCallBack()">webviewCallback</button>
     <button onclick="callFlutteriOSCallBackCallBack()">iosCallback</button>
     <button onclick="callFlutterLogOutOnWebview()">logOutOnWebview</button>
+    <button onclick="downloadPdfCallBack()">downloadPdf</button>
 </body>
 </html>
 
